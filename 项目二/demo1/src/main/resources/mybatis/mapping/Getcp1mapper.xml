@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.svse.dao.Getcp1dao">
+<select id="getAll" resultType="Getcp1" parameterType="Getcp1">
+	SELECT gid ,a.fid,fname,b.cid,cname,fmodel,faddress,foutprice,finprice,fimg,gcount ,gcount ,gtime,uid FROM getcp a,mytf b, cptype c where a.fid=b.fid and b.cid=c.cid 
+	<if test="fid!=0 and fid!=null">
+	and a.fid=#{fid}
+	</if>
+	
+	 limit #{begin},#{page}
+	</select>
+<select id="getOne" parameterType="int" resultType="Getcp1">
+	SELECT gid ,a.fid,fname,b.cid,cname,fmodel,faddress,foutprice,finprice,fimg,gcount ,gcount ,gtime,uid FROM getcp a,mytf b, cptype c where a.fid=b.fid and b.cid=c.cid and gid=#{gid}
+</select>
+
+<select id="getcount" resultType="int"  parameterType="Getcp1">
+	select count(*) from getcp 	where  fid=#{fid}
+</select>
+
+<update id="updateGetcp1" parameterType="Getcp1">
+	update getcp set fid=#{fid} ,gcount=#{gcount},gtime=#{gtime},uid=#{uid} where gid=#{gid}
+</update>
+
+<insert id="addGetcp1" parameterType="Getcp1">
+	insert into getcp values(null,#{fid},#{gcount},#{gtime},#{uid})
+</insert>
+
+
+
+<!-- 下拉框 -->
+<select id="all" resultType="Getcp1">
+	select * from getcp
+</select>
+
+<select id="getmoney" resultType="Getcp1" parameterType="int">
+	select sum(gcount)  count,foutprice from getcp a,mytf b where a.fid=b.fid and  a.fid=#{fid}
+</select>
+
+
+
+</mapper>

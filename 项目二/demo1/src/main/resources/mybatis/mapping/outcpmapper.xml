@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.svse.dao.Outcpdao">
+<select id="getAll" resultType="Outcp">
+	SELECT DISTINCT tid ,a.rid, rname,rcard,a.fid,fname,b.cid ,cname ,foutprice,c.did,dzk,xcount,ttime,a.uid,uname from outcp a,mytf b,member c,cptype f , dj e ,userinfo g where a.rid=c.rid and a.fid=b.fid and b.cid=f.cid and e.did=c.did and b.cid= f.cid and a.uid=g.uid and a.tflag=1 limit #{0}, #{1}
+</select>
+<select id="getOne" parameterType="int" resultType="Outcp">
+	SELECT DISTINCT tid ,a.rid, rname,rcard,a.fid,fname,b.cid ,cname ,foutprice,c.did,dzk,xcount,ttime,a.uid,uname from outcp a,mytf b,member c,getcp d,cptype f , dj e ,userinfo g where a.rid=c.rid and a.fid=b.fid and b.cid=f.cid and e.did=c.did and b.cid= f.cid and a.uid=g.uid and a.tflag=1 and tid=#{tid}
+</select>
+
+<select id="getcount" resultType="int">
+	select count(*) from outcp 
+</select>
+
+<update id="updateOutcp" parameterType="Outcp">
+	update outcp set rid=#{rid},fid=#{fid},xcount=#{xcount},ttime=#{ttime},uid=#{uid},tflag=#{tflag} where tid=#{tid}
+</update>
+
+<insert id="addOutcp" parameterType="Outcp">
+	insert into outcp values(null,#{rid},#{fid},#{xcount},#{ttime},#{uid},#{tflag})
+</insert>
+
+<!-- 会员购买订单-->
+<select id="getorder" parameterType="int" resultType="Outcp">
+	SELECT DISTINCT tid ,a.rid, rname,rcard,a.fid,fname,b.cid ,cname ,foutprice,c.did,dzk,xcount,ttime,a.uid,uname from outcp a,mytf b,member c,cptype f , dj e ,userinfo g where a.rid=c.rid and a.fid=b.fid and b.cid=f.cid and e.did=c.did and b.cid= f.cid and a.uid=g.uid and a.tflag=1
+	<if test="rid!=0 and rid!=null">
+	and a.rid=#{rid}
+	</if>
+	
+	 limit #{begin}, #{page}
+</select>
+
+<!-- 会员购买账单总数 -->
+<select id="getordercount" resultType="int" parameterType="Outcp">
+	select count(*) from outcp where rid=#{rid}
+</select>
+
+<!-- 下拉框 -->
+<select id="all" resultType="Outcp">
+	select * from outcp
+</select>
+
+<delete id="dele" parameterType="int">
+		delete from outcp where tid=#{tid}
+</delete>
+
+<!--会员购买的某产品总数 -->
+<select id="getsum" resultType="int" parameterType="int">
+	select sum(xcount) count from outcp where fid=#{fid}
+</select>
+
+
+<!-- 已订购 -->
+<update id="upporder" parameterType="int">
+		update outcp  set  tflag=0 where tid=#{tid}
+</update>
+
+<select id="getAllout" resultType="Outcp">
+SELECT  tid,a.fid,fname,b.cid,cname,fmodel,faddress,foutprice,finprice,fimg,xcount,ttime,uid,tflag FROM outcp a,mytf b, cptype c where a.fid=b.fid and b.cid=c.cid and tflag=0
+<if test="fid!=0 and fid!=null">
+	and a.fid=#{fid}
+	</if>
+	 limit #{begin},#{page}
+</select>
+
+<select id="getcountout" resultType="int"  parameterType="Outcp">
+	select count(*) from outcp 	where tflag=0 and  fid=#{fid}
+</select>
+
+
+</mapper>

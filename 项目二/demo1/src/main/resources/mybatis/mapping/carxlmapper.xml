@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.svse.dao.Carxldao">
+<select id="getAll" resultType="Carxl">
+	select xid,aname,a.aid ,xname from carxl a,cartype  b where a.aid=b.aid  limit #{0},#{1}
+</select>
+<select id="getOne" parameterType="int" resultType="Carxl">
+	select xid,aname,a.aid ,xname from carxl a,cartype  b where a.aid=b.aid and xid=#{xid}
+</select>
+
+<select id="getcount" resultType="int">
+	select count(*) from carxl 
+</select>
+
+<update id="updateCarxl" parameterType="Carxl">
+	update carxl set aid=#{aid},xname=#{xname} where xid=#{xid}
+</update>
+
+<insert id="addCarxl" parameterType="Carxl">
+	insert into carxl values(null,#{aid},#{xname})
+</insert>
+
+<!--验证重名 -->
+<select id="getaname" parameterType="Carxl" resultType="Carxl">
+	select xname from carxl where xid=#{xid}
+</select>
+
+<!-- 修改验证重名 -->
+<select id="verifyname" parameterType="Carxl" resultType="int">
+	select count(*) from carxl where xname=#{xname}
+</select>
+
+<!-- 下拉框 -->
+	<select id="all" resultType="Carxl">
+		select * from carxl
+	</select>
+	
+	<select id="getallxl" resultType="Carxl" parameterType="int">
+		select * from carxl where aid=#{aid}
+	</select>
+</mapper>

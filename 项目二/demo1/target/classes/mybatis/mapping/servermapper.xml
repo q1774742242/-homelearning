@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.svse.dao.Serverdao">
+<select id="getAll" resultType="Servicetype">
+	select * from servicetype limit #{0}, #{1}
+</select>
+<select id="getOne" parameterType="int" resultType="Servicetype">
+	select * from servicetype where sid=#{sid}
+</select>
+
+<select id="getcount" resultType="int">
+	select count(*) from servicetype 
+</select>
+
+<update id="updateService" parameterType="Servicetype">
+	update servicetype set sname=#{sname} where sid=#{sid}
+</update>
+
+<insert id="addservice" parameterType="Servicetype">
+	insert into servicetype values(null,#{sname})
+</insert>
+
+<!--验证重名 -->
+<select id="getsname" parameterType="Servicetype" resultType="Servicetype">
+	select sname from servicetype where sid=#{sid}
+</select>
+
+<!-- 修改验证重名 -->
+<select id="verifyname" parameterType="Servicetype" resultType="int">
+	select count(*) from servicetype where sname=#{sname}
+</select>
+</mapper>

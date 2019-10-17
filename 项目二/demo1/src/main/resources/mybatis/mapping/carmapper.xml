@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.svse.dao.Cardao">
+<select id="getAll" resultType="Car">
+	select * from cartype limit #{0}, #{1}
+</select>
+<select id="getOne" parameterType="int" resultType="Car">
+	select * from cartype where aid=#{aid}
+</select>
+
+<select id="getcount" resultType="int">
+	select count(*) from cartype 
+</select>
+
+<update id="updatecar" parameterType="Car">
+	update cartype set aname=#{aname} where aid=#{aid}
+</update>
+
+<insert id="addcar" parameterType="Car">
+	insert into cartype values(null,#{aname})
+</insert>
+
+<!--验证重名 -->
+<select id="getaname" parameterType="Car" resultType="Car">
+	select aname from cartype where aid=#{aid}
+</select>
+
+<!-- 修改验证重名 -->
+<select id="verifyname" parameterType="Car" resultType="int">
+	select count(*) from cartype where aname=#{aname}
+</select>
+
+<!-- 下拉框 -->
+<select id="all" resultType="Car">
+	select * from cartype
+</select>
+</mapper>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.svse.dao.Memberdao">
+	<select id="getAll" resultType="Member">
+	select rid,rcard,rname,rpsw,rimg,rtel,rsex,a.did,dname,rbirthday,rstatus,rcode,rcarnum,a.xid,xname,rcolor,rway,a.zid,zname,rnum,raddress,rremark,rtime,rmoney, f.aid, aname from member a,dj b,carxl c ,pcard d ,cartype f where a.did=b.did and a.xid=c.xid and a.zid=d.zid and c.aid=f.aid  limit #{0}, #{1}
+</select>
+<select id="getOne" parameterType="int" resultType="Member">
+	select rid,rcard,rname,rpsw,rimg,rtel,rsex,a.did,dname,dzk,rbirthday,rstatus,rcode,rcarnum,a.xid,xname,rcolor,rway,a.zid,zname,rnum,raddress,rremark,rtime,rmoney, f.aid, aname from member a,dj b,carxl c ,pcard d ,cartype f where a.did=b.did and a.xid=c.xid and a.zid=d.zid and c.aid=f.aid and rid=#{rid}
+</select>
+
+<select id="getcount" resultType="int">
+	select count(*) from member 
+</select>
+
+<update id="updateMember" parameterType="Member">
+	update member set rcard=#{rcard},rname=#{rname},rpsw=#{rpsw},rimg=#{rimg},rtel=#{rtel},rsex=#{rsex},did=#{did},rbirthday=#{rbirthday},rstatus=#{rstatus}, rcode=#{rcode},rcarnum=#{rcarnum},xid=#{xid},rcolor=#{rcolor},rway=#{rway},zid=#{zid},rnum=#{rnum},
+	raddress=#{raddress},rremark=#{rremark},rtime=#{rtime},rmoney=#{rmoney} where rid=#{rid}
+</update>
+
+<insert id="addMember" parameterType="Member">
+	insert into member values(null,#{rcard},#{rname},#{rpsw},#{rimg},#{rtel},#{rsex},#{did},#{rbirthday},#{rstatus},#{rcode},#{rcarnum},#{xid},#{rcolor},#{rway},#{zid},#{rnum},#{raddress},#{rremark},#{rtime},#{rmoney})
+</insert>
+
+<!--验证重名 -->
+<select id="getrname" parameterType="Member" resultType="Member">
+	select rname from member where rid=#{rid}
+</select>
+
+<!-- 验证卡号重名 -->
+
+<select id="getrcard" parameterType="Member" resultType="Member">
+	select rcard from member where rid=#{rid}
+</select>
+
+<!-- 修改验证重名 -->
+<select id="verifyname" parameterType="Member" resultType="int">
+	select count(*) from member where rname=#{rname}
+</select>
+
+<select id="verifycard" parameterType="Member" resultType="int">
+	select count(*) from member where rcard=#{rcard}
+</select>
+
+<!-- 下拉框 -->
+<select id="all" resultType="Member">
+	select * from member
+</select>
+
+<!-- 会员卡号查所有 -->
+<select id="getselect" resultType="Member"  parameterType="Member">
+	select rid,rcard,rname,rpsw,rimg,rtel,rsex,a.did,dname,rbirthday,rstatus,rcode,rcarnum,a.xid,xname,rcolor,rway,a.zid,zname,rnum,raddress,rremark,rtime,rmoney, f.aid, aname from member a,dj b,carxl c ,pcard d ,cartype f where a.did=b.did and a.xid=c.xid and a.zid=d.zid and c.aid=f.aid  and rcard=#{rcard}
+</select>
+
+<update id="uppmoney" parameterType="Member">
+	update member set rmoney=#{rmoney} where rid=#{rid}
+</update>
+
+</mapper>

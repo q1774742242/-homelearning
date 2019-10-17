@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.svse.dao.Carddao">
+<select id="getAll" resultType="Pcard">
+	select * from pcard limit #{0}, #{1}
+</select>
+<select id="getOne" parameterType="int" resultType="Pcard">
+	select * from pcard where zid=#{zid}
+</select>
+
+<select id="getcount" resultType="int">
+	select count(*) from pcard 
+</select>
+
+<update id="updatecard" parameterType="Pcard">
+	update pcard set zname=#{zname} where zid=#{zid}
+</update>
+
+<insert id="addcard" parameterType="Pcard">
+	insert into pcard values(null,#{zname})
+</insert>
+
+<!--验证重名 -->
+<select id="getzname" parameterType="Pcard" resultType="Pcard">
+	select zname from pcard where zid=#{zid}
+</select>
+
+<!-- 修改验证重名 -->
+<select id="verifyname" parameterType="Pcard" resultType="int">
+	select count(*) from pcard where zname=#{zname}
+</select>
+
+
+<!-- 下拉框 -->
+	<select id="all" resultType="Pcard">
+		select * from pcard
+	</select>
+</mapper>

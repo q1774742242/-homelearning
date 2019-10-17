@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link  th:href="@{/css/table.css}" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+<form th:action="@{emp.do?method=add}" method="post"  enctype="multipart/form-data">
+	<table align="center">
+		<tr>
+			<td>员工名称:</td>
+			<td><input type="text" name="ename" ></td>
+		</tr>
+		<tr>
+			<td>部门名称:</td>
+			<td>
+			<select id="pid" name="pid" >
+				<option th:each="x:${all}" th:value="${x.pid}" th:text="${x.pname}"></option>
+			</select>
+			</td>
+		</tr>
+		<tr>
+			<td>员工相片:</td>
+			<td><input type="file" name="ximg" id="ximg"></td>
+		</tr>
+		<tr>
+			<td colspan="4" align="center"><input type="submit" value="确定" id="btn"></td>
+		</tr>
+	
+	
+	</table>
+</form>
+</body>
+</html>

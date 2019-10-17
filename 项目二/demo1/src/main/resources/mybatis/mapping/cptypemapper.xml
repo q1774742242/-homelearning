@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.svse.dao.Ctypedao">
+	<select id="getAll" resultType="Cptype">
+		select * from cptype limit #{0},#{1}
+	</select>
+	
+	<select id="getone" resultType="Cptype" parameterType="int">
+		select * from cptype where cid=#{cid}
+	</select>
+	
+	<update id="updatectype" parameterType="Cptype">
+		update cptype set cname=#{cname} where cid=#{cid}
+	</update>
+	
+	<insert id="addctype" parameterType="Cptype">
+		insert into cptype values(null,#{cname})
+	</insert>
+	
+	<delete id="delectype" parameterType="int">
+		delete from cptype where cid=#{cid}
+	</delete>
+	
+	<select id="getcount" resultType="int">
+		select count(*) from cptype 
+	</select>
+	<!-- 验证重名 -->
+	<select id="getcount1" parameterType="Cptype" resultType="int">
+		select count(*) from cptype where cname=#{cname}
+	</select>
+	<!-- 根据id查找名字 -->
+	<select id="getcname" parameterType="int" resultType="Cptype">
+			select cname from  cptype where cid=#{cid}
+	</select>
+	
+	<select id="all" resultType="Cptype">
+		select * from cptype
+	</select>
+	
+</mapper>

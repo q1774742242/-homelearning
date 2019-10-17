@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<table align="center">
+		<tr>
+			<td>员工编号:</td>
+			<td>员工名称:</td>
+			<td>员工照片:</td>
+			<td>修改:</td>
+			<td>删除:</td>
+		</tr>
+			<tr th:each="x:${all}" align="center">
+			<th th:text="${x.eid}"></th>
+			<th th:text="${x.pname}"></th>
+			<th th:text="${x.ename}"></th>
+			<th>
+			<img th:src="@{${'/path/'+x.eimg}}"  width="200px" height="150px"/>
+			</th>
+			
+		
+			<td > <a th:href="@{emp.do?method=myupp(eid=${x.eid})}">修改:</a></td>
+			<td > <a th:href="@{emp.do?method=dele(eid=${x.eid})}">删除:</a></td>
+		</tr>
+		
+		
+		<tr>
+			<td colspan="5" align="center"><a th:href="@{emp.do?method=myadd}">增加</a></td>
+		</tr>
+	
+	
+	</table>
+</body>
+</html>

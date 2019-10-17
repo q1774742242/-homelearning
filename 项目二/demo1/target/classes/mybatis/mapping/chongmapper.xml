@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.svse.dao.Chongdao">
+<select id="getAll" resultType="Chong">
+	SELECT oid ,a.rid,rcard,omoney,a.yid,ytitle,ymoney,ylessmoney,osmoney,olastmoney,a.uid,uname,oremark,otime from  chong a, member b,youhui c, userinfo d where a.rid=b.rid and a.yid=c.yid and a.uid=d.uid limit #{0}, #{1}
+</select>
+<select id="getOne" parameterType="int" resultType="Chong">
+	SELECT oid ,a.rid,rcard,omoney,a.yid,ytitle,ymoney,ylessmoney,osmoney,olastmoney,a.uid,uname,oremark,otime from  chong a, member b,youhui c, userinfo d where a.rid=b.rid and a.yid=c.yid and a.uid=d.uid and  oid=#{oid}
+</select>
+
+<select id="getcount" resultType="int">
+	select count(*) from chong 
+</select>
+
+<update id="updateChong" parameterType="Chong">
+	update chong set rid=#{rid},omoney=#{omoney},yid=#{yid},osmoney=#{osmoney},olastmoney=#{olastmoney},uid=#{uid},oremark=#{oremark},otime=#{otime} where oid=#{oid}
+</update>
+
+<insert id="addChong" parameterType="Chong">
+	insert into chong values(null,#{rid},#{omoney},#{yid},#{osmoney},#{olastmoney},#{uid},#{oremark},#{otime})
+</insert>
+
+
+<!-- 下拉框 -->
+<select id="all" resultType="Chong">
+	select * from chong
+</select>
+</mapper>

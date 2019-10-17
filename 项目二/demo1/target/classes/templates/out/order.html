@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<link  th:href="@{/css/bootstrap-table.css}" rel="stylesheet" type="text/css"/>
+<link 	th:href="@{/css/bootstrap.min.css}" rel="stylesheet" type="text/css"/>
+<script th:src="@{/js/jquery-3.4.1.min.js}"></script>
+<script th:src="@{/layer/layer.js}"></script>
+<script th:src="@{/js/bootstrap.min.js}"></script>
+<script th:src="@{/js/bootstrap.js}"></script>
+<script th:src="@{/js/bootstrap-table.js}"></script>
+<script th:src="@{/js/bootstrap-table-zh-CN.js}"></script>
+<script th:src="@{/js/out/order.js}"></script>
+<script th:src="@{/js/iframe.js}"></script>
+
+<style type="text/css">
+span{color:grey;}
+a{
+color:grey;
+text-decoration:none;
+
+}
+#more{
+	display:none;
+	}
+	
+table{
+	padding-right: 40px;
+	width:90%;
+	
+}
+.great{
+	color:#004E90;
+	font-weight:lighter;
+}
+
+.fixed-table-body{
+height: 400px;
+}
+.fixed-table-container{
+height: 400px;
+}
+
+</style>
+
+
+</head>
+<body>
+ <div class="box box-primary">
+ <!-- Content Header (Page header) -->
+ 
+  <section class="content-header" >
+  <span>系统管理</span>
+   <i class="glyphicon glyphicon-chevron-right"></i>
+    <span>消费管理</span>
+    </section>
+     <!--以下为订单查询：会员卡查询-->
+    <div class="panel-body" style="padding-bottom:0px;">
+			    
+			
+			
+		<div class="form-group">
+			
+			<span >查询条件:</span>
+			<br><hr>
+			
+		</div>
+			
+		<div class="form-group">
+			<div class="col-sm-3">
+			<input type="text" class="form-control required" id="rcard1" placeholder="请输入会员卡号"/>				
+			</div>
+			<div class="col-sm-3" >
+			 <button type="button" class="btn btn-default" id="btn1">确定提交</button>
+			 <br><br>
+			</div>
+		</div>
+	</div>
+</div>
+			<hr>
+			
+    
+    
+    
+    
+
+	<!-- 会员显示部分 -->
+     <div class="panel-body" style="padding-bottom:0px;" >
+		    <div id="more">
+		
+		
+		<div class="form-group">
+		<span >查询内容:</span>
+		<br><hr>
+		</div>
+		
+	
+		<!-- 查询内容 -->
+		<div class="form-group" align="center">
+				<table>
+					<tr>
+						<td><label for="ds_host" >会员卡号:</label></td>
+						<td><label for="ds_host" style="color:#B9F2FF" id="card" class="great"></label></td>
+						
+						<td><label for="ds_host" >会员姓名:</label></td>
+						<td><label for="ds_host" id="name" class="great"></label></td>
+						
+						
+						<td><label for="ds_host" >会员相册:</label></td>
+						<td><label for="ds_host" id="img" class="great"><span class="glyphicon glyphicon-picture" aria-hidden="true"></span>&nbsp;<a href="#" id="bt">查看</a></label></td>
+				
+					
+			
+					
+						<td><label for="ds_host" >会员性别</label></td>
+						<td><label for="ds_host" id="sex" class="great"></label></td>
+						
+						<td> <label for="ds_host" >卡号密码:</label></td>
+						<td><label for="ds_host" id="psw" class="great"></label></td>
+						
+						<td><label for="ds_host">会员等级:</label></td>
+					
+						<td><label for="ds_host" id="did"class="great"></label></td>
+
+						<td><label for="ds_host" >会员生日:</label></td>
+						<td><label for="ds_host" id="birthday" class="great"></label></td>
+					</tr>
+					
+					<tr>
+						<td><label for="ds_host" >手机号码:</label></td>
+						<td><label for="ds_host" id="tel"class="great"></label></td>
+						
+						
+						<td><label for="ds_host" >卡上余额:</label></td>
+						<td><label for="ds_host" id="cnum" class="great"></label></td>
+				
+					
+					
+					
+						<td><label for="ds_host" >卡号状态:</label></td>
+						<td><label for="ds_host" id="statu" class="great"></label></td>
+						
+						<td><label for="ds_host" >卡上积分:</label></td>
+						<td><label for="ds_host" id="code" class="great"></label></td>
+						
+						
+						<td><label for="ds_host" >车牌号码:</label></td>
+						<td><label for="ds_host" id="carnum" class="great"></label></td>
+					
+					
+					
+					
+						<td><label for="ds_host" >汽车品牌:</label></td>
+						<td><label for="ds_host" id="cname"class="great"></label></td>
+						
+						
+						<td><label for="ds_host" >汽车系列:</label></td>
+						<td><label for="ds_host" id="carxl"class="great"></label></td>
+						</tr>
+						<tr>
+						
+						
+						
+						<td><label for="ds_host" >行驶里程:</label></td>
+						<td><label for="ds_host" id="way"class="great"></label></td>
+					
+						<td><label for="ds_host" >联系地址:</label></td>
+						<td><label for="ds_host" id="address"class="great"></label></td>
+						
+						<td><label for="ds_host" >证件类型:</label></td>
+						<td><label for="ds_host" id="cardtype"class="great"></label></td>
+						
+						
+						<td><label for="ds_host" >证件编号:</label></td>
+						<td><label for="ds_host" id="cardnum"class="great"></label></td>
+					
+						<td><label for="ds_host" >开通时间:</label></td>
+						<td><label for="ds_host" id="time" class="great"></label></td>
+						
+						<td><label for="ds_host" >会员备注:</label></td>
+						<td><label for="ds_host" id="remark" class="great"></label></td>
+						<input type="hidden" id="rid" name="rid"/>
+					</tr>
+		
+				</table>
+					<hr>
+					
+		</div>	
+
+   		 </div>
+	</div>
+    
+    
+    <!--以下为订单列表-->
+  <div class="panel-body" >
+  	<div class="form-group">
+		<span >订单列表:</span>
+		<br><hr>
+	</div>
+     <div id="toolbar" class="btn-group">
+     		 <button id="btn_turn" type="button" class="btn btn-default">
+                <span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span>
+            	    <a th:href="@{/out.do?method=index}">返回上层</a>
+            </button>
+             <button id="btn_add" type="button" class="btn btn-default">
+                <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>购买商品
+            </button>
+            <button id="btn_buy" type="button" class="btn btn-default">
+                <span class="glyphicon glyphicon-usd" aria-hidden="true"></span>结账
+            </button>
+        </div>
+        
+        
+        <table id="tb_departments" ></table>
+</div>
+
+
+</body>
+</html>

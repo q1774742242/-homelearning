@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script th:src="@{/js/jquery-3.4.1.min.js}"></script>
+<script th:src="@{/layer/layer.js}"></script>
+<link  th:href="@{/css/bootstrap-table.css}" rel="stylesheet" type="text/css"/>
+<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" type="text/css"/>
+<link th:href="@{/plugins/datepicker/bootstrap-datepicker3.css}" rel="stylesheet" type="text/css"/>
+<script th:src="@{/js/bootstrap.min.js}"></script>
+<script th:src="@{/js/bootstrap.js}"></script>
+<script th:src="@{/js/bootstrap-table.js}"></script>
+<script th:src="@{/js/bootstrap-table-zh-CN.js}"></script>
+<script th:src="@{/js/ajaxfileupload.js}"></script>
+
+<script th:src="@{/plugins/datepicker/bootstrap-datepicker.min.js}"></script>
+<script th:src="@{/js/chong/add.js}"></script>
+
+<style type="text/css">
+#line{
+	
+		margin-top:40px;
+		line-height:20px;
+	}
+label{margin:10px;}
+	#more{
+	display:none;
+	
+	
+	}
+</style>
+</head>
+<body>
+<br>
+<div class="container"  >
+<div class="row clearfix">
+<div class="col-md-12 column">
+<div class="form-group">
+
+<span >查询条件:</span>
+<br><hr>
+
+</div>
+
+<div class="form-group">
+<div class="col-sm-3">
+<input type="text" class="form-control required" id="rcard1" placeholder="请输入会员卡号"/>				
+</div>
+<div class="col-sm-3" >
+ <button type="button" class="btn btn-default" id="btn1">确定提交</button>
+ <br><br>
+</div>
+</div>
+</div>
+</div>
+<hr>
+</div>
+
+<div id="more">
+<div class="container" >
+<div class="row clearfix">
+<div class="col-md-12 column">
+<div class="form-group">
+<span >查询内容:</span>
+<br><hr>
+</div>
+</div>
+</div>
+</div>
+<!-- 查询内容 -->
+<div class="form-group" align="center">
+		<table>
+			<tr>
+				<td><label for="ds_host" >会员卡号:</label></td>
+				<td><label for="ds_host" style="color:#B9F2FF" id="card"></label></td>
+				
+				<td><label for="ds_host" >会员姓名:</label></td>
+				<td><label for="ds_host" id="name"></label></td>
+				
+				
+				<td><label for="ds_host" >会员相册:</label></td>
+				<td><label for="ds_host" id="img"><span class="glyphicon glyphicon-picture" aria-hidden="true"></span>&nbsp;<a href="#" id="bt">查看</a></label></td>
+			</tr>
+			
+			<tr>
+			
+			<td><label for="ds_host" >会员性别</label></td>
+			<td><label for="ds_host" id="sex"></label></td>
+			
+			<td> <label for="ds_host" >卡号密码:</label></td>
+			<td><label for="ds_host" id="psw"></label></td>
+			
+			<td><label for="ds_host">会员等级:</label></td>
+		
+			<td><label for="ds_host" id="did"></label></td>
+			</tr>
+			
+			
+			<tr>
+				<td><label for="ds_host" >会员生日:</label></td>
+				<td><label for="ds_host" id="birthday"></label></td>
+				
+				<td><label for="ds_host" >手机号码:</label></td>
+				<td><label for="ds_host" id="tel"></label></td>
+				
+				
+				<td><label for="ds_host" >卡上余额:</label></td>
+				<td><label for="ds_host" id="cnum"></label></td>
+			</tr>
+			
+			
+			<tr>
+				<td><label for="ds_host" >卡号状态:</label></td>
+				<td><label for="ds_host" id="statu"></label></td>
+				
+				<td><label for="ds_host" >卡上积分:</label></td>
+				<td><label for="ds_host" id="code"></label></td>
+				
+				
+				<td><label for="ds_host" >车牌号码:</label></td>
+				<td><label for="ds_host" id="carnum"></label></td>
+			</tr>
+			
+			
+			<tr>
+				<td><label for="ds_host" >汽车品牌:</label></td>
+				<td><label for="ds_host" id="cname"></label></td>
+				
+				<td><label for="ds_host" >汽车系列:</label></td>
+				<td><label for="ds_host" id="carxl"></label></td>
+				
+				
+				<td><label for="ds_host" >行驶里程:</label></td>
+				<td><label for="ds_host" id="way"></label></td>
+			</tr>
+			
+			<tr>
+				<td><label for="ds_host" >联系地址:</label></td>
+				<td><label for="ds_host" id="address"></label></td>
+				
+				<td><label for="ds_host" >证件类型:</label></td>
+				<td><label for="ds_host" id="cardtype"></label></td>
+				
+				
+				<td><label for="ds_host" >证件编号:</label></td>
+				<td><label for="ds_host" id="cardnum"></label></td>
+			</tr>
+			
+			
+			<tr>
+				<td><label for="ds_host" >开通时间:</label></td>
+				<td><label for="ds_host" id="time"></label></td>
+				
+				<td><label for="ds_host" >会员备注:</label></td>
+				<td><label for="ds_host" id="remark"></label></td>
+
+			</tr>
+
+		</table>
+			<hr>
+			
+</div>	
+</div>
+<!-- 充值部分 -->			
+				
+ <div class="container" align="center" >
+	<div class="row clearfix">
+		<div class="col-md-5 column">
+		<div class="form-group">
+		<span >充值详情:</span>
+		<br><hr>
+		</div>
+				<div class="form-group">
+					 <label for="ds_host" class="col-sm-2 control-label">会员卡号:</label>
+					<div class="col-sm-3">
+						<input type="text" class="form-control required" id="rcard" placeholder="请输入会员卡号"/>
+					</div>
+					
+					<label for="ds_host" class="col-sm-2 control-label">优惠活动:</label>
+					<div class="col-sm-3" style="margin-bottom:15px">
+						<select id="yid" name="yid" class="form-control">
+							<option value="0">请选择优惠活动</option>
+							
+						</select>
+					</div>
+			
+				</div>
+			
+
+		
+			<div class="form-group">
+					 <label for="ds_host" class="col-sm-2 control-label">充值金额:</label>
+					<div class="col-sm-3">
+						<input type="text" class="form-control required" id="omoney" placeholder="请输入充值金额"/>
+					</div>
+					
+					<label for="ds_host" class="col-sm-2 control-label">赠送金额</label>
+					<div class="col-sm-3" style="margin-bottom:15px">
+						<input type="text" class="form-control required" id="osmoney" placeholder="--优惠活动-" readonly="readonly"/>
+					</div>
+				
+			</div>
+			
+			
+			
+			
+			
+			
+			<div class="form-group">
+					 <label for="ds_host" class="col-sm-2 control-label">最终金额:</label>
+					<div class="col-sm-3">
+						<input type="text" class="form-control required" id="olastmoney" value="0" placeholder="--活动后金额--" readonly="readonly"/>
+						
+					</div>
+					<br>
+					 <label for="ds_host" class="col-sm-2 control-label">会员备注:</label>
+					<div class="col-sm-3 ">
+						<input type="text" class="form-control required" id="oremark" placeholder="--备注-"/>
+					</div>
+
+			</div>
+		
+				<input type="hidden" name="rid" id="rid" />
+				
+			
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-8" style="margin-top: 30px;">
+						 <button type="button" class="btn btn-default" id="btn2">确定提交</button>
+					<br>
+					<hr>
+					</div>
+					
+				</div>
+			
+		</div>
+		<div class="col-md-5 column">
+		</div>
+	</div>
+</div>
+
+
+
+
+</body>
+</html>

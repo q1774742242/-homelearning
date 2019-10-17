@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script th:src="@{/js/jquery-3.4.1.min.js}"></script>
+<script th:src="@{/layer/layer.js}"></script>
+<link  th:href="@{/css/bootstrap-table.css}" rel="stylesheet" type="text/css"/>
+<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" type="text/css"/>
+<link th:href="@{/plugins/datepicker/bootstrap-datepicker3.css}" rel="stylesheet" type="text/css"/>
+<script th:src="@{/js/bootstrap.min.js}"></script>
+<script th:src="@{/js/bootstrap.js}"></script>
+<script th:src="@{/js/bootstrap-table.js}"></script>
+<script th:src="@{/js/bootstrap-table-zh-CN.js}"></script>
+<script th:src="@{/js/ajaxfileupload.js}"></script>
+
+<script th:src="@{/js/cpinfo/add.js}"></script>
+
+<style type="text/css">
+#line{
+	
+		margin-top:40px;
+		line-height:20px;
+	}
+</style>
+</head>
+<body>
+
+
+<div class="container" align="center">
+	<div class="row clearfix" id="line">
+		<div class="col-md-5 column">
+			
+				<div class="form-group">
+					 <label for="inputEmail3" class="col-sm-4 control-label" >产品名称:</label>
+					<div class="col-sm-4" >
+						<input type="text" class="form-control" id="fname" placeholder="请输入产品名称"/>
+					</div>
+					<br>
+				</div>
+				
+				<div class="form-group" style="margin-top:30px;">
+					 <label for="inputEmail3" class="col-sm-4 control-label">产品类型:</label>
+				<div class="col-sm-4">
+				<select id="cid" name="cid" class="form-control">
+
+				</select>
+				
+				</div>
+					<br>
+				</div>
+				
+				<div class="form-group" style="margin-top:30px;">
+					<label for="inputEmail3" class="col-sm-4 control-label">产品单位:</label>
+				<div class="col-sm-4">
+				<select id="fmodel" name="fmodel" class="form-control">
+						
+				</select>
+				
+				</div>
+				<br>
+				</div>
+			
+				
+				<div class="form-group" style="margin-top:30px;">
+					 <label for="inputEmail3" class="col-sm-4 control-label" >产品产地:</label>
+					<div class="col-sm-4" >
+						<input type="text" class="form-control" id="faddress" placeholder="请输入产品产地"/>
+					</div>
+					<br>
+				</div>
+				
+				<div class="form-group" style="margin-top:30px;">
+					<label for="inputEmail3" class="col-sm-4 control-label" >出售价格:</label>
+					<div class="col-sm-4" >
+						<input type="text" class="form-control" id="foutprice" placeholder="请输入产品出售价格"/>
+					</div>
+					<br>
+				</div>
+				
+				
+				<div class="form-group" style="margin-top:30px;">
+					 <label for="inputEmail3" class="col-sm-4 control-label" >进货价格:</label>
+					<div class="col-sm-4" >
+						<input type="text" class="form-control" id="finprice" placeholder="请输入进货价格"/>
+					</div>
+					<br>
+				</div>
+				
+				
+				
+				
+				<div class="form-group" style="margin-top:30px;">
+				
+				 <label for="ds_host" class="col-sm-4 control-label">会员相册:</label>
+					<div class="col-sm-4">
+						<input type="file" class="form-control required" id="ximg" name="ximg"/>
+					</div>
+				<br>
+				</div>
+				
+			<input type="hidden" name="fcount" id="fcount" value="0"/>
+			
+				<div class="form-group" style="margin-top:30px;">
+					<div class="col-sm-offset-2 col-sm-8" >
+						 <button type="button" class="btn btn-default" id="btn">确定提交</button>
+					</div>
+				</div>
+			
+		</div>
+		<div class="col-md-5 column">
+		</div>
+	</div>
+</div>
+
+ 
+</body>
+</html>

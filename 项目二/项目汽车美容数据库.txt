@@ -1,0 +1,343 @@
+use test;
+
+#会员等级表
+create  table dj
+(
+did int not null primary key auto_increment,#等级编号
+dname VARCHAR(30),#等级名称
+djf int ,#等级积分
+dmoneychange double ,#兑换比例
+dzk double #兑换折扣
+)ENGINE=INNODB DEFAULT CHARSET=utf8;
+
+#产品类别表
+create  table cptype
+(
+cid int not null primary  key auto_increment,#类别编号
+cname VARCHAR(20) #类别名称
+)ENGINE=INNODB DEFAULT CHARSET=utf8;
+
+#服务类型表
+create  table servicetype
+(
+sid int not null primary  key auto_increment,#服务类别编号
+sname VARCHAR(20) #服务类别名称
+)ENGINE=INNODB DEFAULT CHARSET=utf8;
+
+#凭证表
+create  table pcard
+(
+zid int not null primary  key auto_increment,#凭证编号
+zname VARCHAR(50) #凭证名称
+)ENGINE=INNODB DEFAULT CHARSET=utf8;
+
+#汽车类别表
+create  table cartype
+(
+aid int not null primary  key auto_increment,#汽车类别编号
+aname VARCHAR(50) #汽车类别名称
+)ENGINE=INNODB DEFAULT CHARSET=utf8;
+
+#汽车系列表
+create  table carxl
+(
+xid int not null primary  key auto_increment,#汽车类别编号
+aid int not null, #汽车类别名称
+foreign key(aid) REFERENCES cartype(aid),
+xname varchar(20)#汽车系列名称
+)ENGINE=INNODB DEFAULT CHARSET=utf8;
+
+#优惠活动表
+
+create  table youhui
+(
+yid int not null primary  key auto_increment,#优惠活动编号
+ytitle VARCHAR(20), #活动名称
+ybegintime VARCHAR(20),#开始时间	
+yendtime VARCHAR(20),#结束时间
+ymoney float(20),#优惠金额
+ylessmoney float(20)#起始金额
+)ENGINE=INNODB DEFAULT CHARSET=utf8;
+
+#员工信息表
+create  table userinfo
+(
+uid int not null primary  key auto_increment,#员工编号
+uname VARCHAR(50), #员工名称
+upsw VARCHAR(200),#员工密码
+urealname VARCHAR(200),#员工真实姓名
+utel varchar(50),#电话
+usex int, #性别（0：女，1：男）
+email VARCHAR(30)
+)ENGINE=INNODB DEFAULT CHARSET=utf8;
+
+
+#会员信息表
+
+create  table member
+(
+rid int not null primary  key auto_increment,#会员编号
+rcard VARCHAR(200), #会员卡号
+rname VARCHAR(50),#会员名称
+rpsw VARCHAR(50),#会员密码
+rimg varchar(200),#会员照片
+rtel varchar(20),#电话
+rsex int ,#性别（0：女，1：男）
+did int ,#等级编号
+FOREIGN key(did) references dj(did),
+rbirthday varchar(20),
+rstatus int,#卡号状态
+rcode  double ,#积分
+rcarnum VARCHAR(50),#车牌号
+xid int ,#汽车系列编号
+foreign key(xid) REFERENCES carxl(xid),
+rcolor varchar(20),#汽车颜色
+rway float,#行驶里程
+zid int ,#凭证编号
+FOREIGN key(zid) REFERENCES pcard(zid) ,
+rnum VARCHAR(20),#证件编号
+raddress varchar(50),#地址
+rremark VARCHAR(20),#备注
+rtime VARCHAR(20),#开通时间
+rmoney float #余额
+)ENGINE=INNODB DEFAULT CHARSET=utf8;
+
+#充值表
+create  table chong
+(
+oid int not null primary  key auto_increment,#编号
+rid int not null ,#会员编号
+foreign key(rid) REFERENCES member(rid),
+omoney FLOAT, #充值金额
+yid int,#活动编号
+FOREIGN KEY(yid) REFERENCES youhui(yid),
+osmoney FLOAT,#优惠金额
+olastmoney float,#最终金额
+uid int not null,#员工编号（经办人编号）
+FOREIGN KEY(uid) REFERENCES userinfo(uid),
+oremark VARCHAR(20),#备注
+otime varchar(20)#下次收租日期
+)ENGINE=INNODB DEFAULT CHARSET=utf8;
+
+#产品信息表
+create  table mytf
+(
+fid int not null primary  key auto_increment,#产品信息编号
+fname VARCHAR(50), #产品名称
+cid int ,#产品类别编号
+FOREIGN KEY(cid) REFERENCES cptype(cid),
+fmodel VARCHAR(50),#产品规格
+faddress VARCHAR(50),#产地
+foutprice FLOAT,#出售价
+finprice float ,#进货价
+fimg VARCHAR(50),#产品图片
+fcount int #进货数量
+)ENGINE=INNODB DEFAULT CHARSET=utf8;
+
+
+#产品入库表
+
+create  table getcp
+(
+gid int not null primary  key auto_increment,#产品入库编号
+fid int not null,#产品库存编号
+FOREIGN KEY(fid) REFERENCES mytf(fid),
+gcount int ,#入库数量
+gtime VARCHAR(20),
+uid int ,#经办人编号（员工编号）
+FOREIGN KEY(uid) REFERENCES userinfo(uid)
+)ENGINE=INNODB DEFAULT CHARSET=utf8;
+
+
+#会员消费信息表
+create  table outcp
+(
+tid int not null primary  key auto_increment,#会员信息消费编号
+rid int ,#会员编号
+FOREIGN KEY(rid) REFERENCES member(rid),
+fid int not null,#产品编号
+FOREIGN KEY(fid) REFERENCES mytf(fid),
+xcount int ,#购买数量
+ttime VARCHAR(20),#时间
+uid int ,#经办人编号（员工编号）
+FOREIGN KEY(uid) REFERENCES userinfo(uid),
+tflag int #结账（0：结账，1：未结账）
+)ENGINE=INNODB DEFAULT CHARSET=utf8;
+
+
+#散客信息表
+create  table outcp1
+(
+wid int not null primary  key auto_increment,#产品入库编号
+fid int not null,#产品编号
+FOREIGN KEY(fid) REFERENCES mytf(fid),
+wcount int ,#购买数量
+wname varchar(20),#购买人姓名
+wtel varchar(20),#购买人电话
+uid int ,#经办人编号（员工编号）
+FOREIGN KEY(uid) REFERENCES userinfo(uid),
+wtime varchar(20) #交易时间
+)ENGINE=INNODB DEFAULT CHARSET=utf8;
+
+
+#计次消费信息表
+create  table jcount
+(
+jid int not null primary  key auto_increment,#编号
+rid int not null,#产品编号
+foreign key(rid) REFERENCES member(rid),
+jtime varchar(20),#交易时间
+sid int ,#服务类型编号
+FOREIGN KEY(sid) REFERENCES servicetype(sid),
+jmoney float,#金额
+uid int ,#经办人编号（员工编号）
+FOREIGN KEY(uid) REFERENCES userinfo(uid)
+
+)ENGINE=INNODB DEFAULT CHARSET=utf8;
+
+
+#礼品信息表
+create  table present
+(
+nid int not null primary  key auto_increment,#编号
+nname varchar(20),#礼品名称
+nimg varchar(50),#图片
+njf int,#兑换所需积分
+ncount int ,#进货数量
+nncount int #剩余数量
+)ENGINE=INNODB DEFAULT CHARSET=utf8;
+
+
+#礼品兑换信息表
+create  table prechange
+(
+hid int not null primary  key auto_increment,#编号
+nid int,#礼品编号
+foreign key(nid) REFERENCES present(nid),
+rid int,#会员编号
+foreign key(rid) REFERENCES member(rid),
+hcount int,#兑换数量
+htime varchar(20),#时间
+uid int ,#经办人
+foreign key(uid) REFERENCES userinfo(uid)
+)ENGINE=INNODB DEFAULT CHARSET=utf8;
+
+
+#关怀表
+create  table look
+(
+kid int not null primary  key auto_increment,#编号
+rid int,#会员编号
+foreign key(rid) REFERENCES member(rid),
+kremark varchar(50),#备注说明
+ktime varchar(20),#时间
+uid int ,#经办人编号
+foreign key(uid) REFERENCES userinfo(uid)
+)ENGINE=INNODB DEFAULT CHARSET=utf8;
+
+insert into dj VALUES(null,'青铜',2000,0.2,0.3);
+insert into dj VALUES(null,'白银',1000,0.2,0.3);
+insert into dj VALUES(null,'铂金',3000,0.2,0.3);
+#等级
+SELECT * from dj;
+
+#产品类型
+INSERT into cptype values(null,'上门服务');
+INSERT into cptype values(null,'网络指导');
+SELECT * from cptype;
+
+#服务方式
+INSERT into servicetype values(null,'套餐一');
+INSERT into servicetype values(null,'套餐二');
+SELECT * from servicetype
+
+#凭证表
+INSERT into pcard values(null,'汽车发票凭证');
+INSERT into pcard values(null,'火车发票凭证');
+INSERT into pcard values(null,'飞机发票凭证');
+
+SELECT * from pcard;
+
+#汽车品牌
+INSERT into cartype VALUES(null,'红旗');
+INSERT into cartype VALUES(null,'奔驰');
+INSERT into cartype VALUES(null,'通用');
+
+
+SELECT * from cartype;
+
+
+#汽车系列
+INSERT into carxl VALUES(null,1,'红旗至尊');
+INSERT into carxl VALUES(null,1,'红旗至尊');
+INSERT into carxl VALUES(null,2,'奔驰x6');
+INSERT into carxl VALUES(null,3,'福特野马');
+
+SELECT * from carxl
+
+
+#优惠
+INSERT into youhui VALUES(null,'办卡优惠','2001-10-10','2018-14-15',100.0,2000);
+INSERT into youhui VALUES(null,'充值优惠','2001-10-10','2018-14-15',100.0,2000);
+INSERT into youhui VALUES(null,'学生优惠','2001-10-10','2018-14-15',100.0,2000);
+INSERT into youhui VALUES(null,'春节优惠','2001-10-10','2018-14-15',100.0,2000);
+INSERT into youhui VALUES(null,'春季优惠','2001-10-10','2018-14-15',100.0,2000);
+
+SELECT * from youhui 
+
+
+#员工
+INSERT into userinfo VALUES(null,'admin','123','马化腾','1205556666',1,null);
+INSERT into userinfo VALUES(null,'xm','123','马化腾','1205556666',0,null);
+INSERT into userinfo VALUES(null,'wu','123','马化腾','1205556666',1,null);
+INSERT into userinfo VALUES(null,'xjp','123','习近平','1205556666',1,null);
+INSERT into userinfo VALUES(null,'admin5','123','66','1205556666',1,null);
+INSERT into userinfo VALUES(null,'guest','123','马化腾','1205556666',1,null);
+SELECT * from userinfo;
+
+
+
+
+#会员
+INSERT into member VALUES(null,'001','长得帅','123','12333.jpg','12222222',0,2,'2014/12',250,1200,'2555555',2,'red',2500,2,250,'hhhh','good','20104',250);
+INSERT into member VALUES(null,'001','长得帅','123','12333.jpg','12222222',0,2,'2014/12',250,1200,'2555555',2,'red',2500,2,250,'hhhh','good','20104',250);
+INSERT into member VALUES(null,'001','长得帅','123','12333.jpg','12222222',0,1,'2014/12',250,1200,'2555555',2,'red',2500,2,250,'hhhh','good','20104',250);
+SELECT * from member
+
+
+#充值
+insert into chong VALUES(null,2,2500,1,100,2400,1,'good','2014/4/12');
+insert into chong VALUES(null,3,2500,1,100,2400,1,'good','2014/4/12');
+insert into chong VALUES(null,2,2500,1,100,2400,1,'good','2014/4/12');
+select * from chong
+
+#产品表
+
+insert into mytf values(null,'机油',1,'个','湖北省武汉市',25.6,12.0,'1568888.jpg',25);
+insert into mytf values(null,'机油',1,'个','湖北省武汉市',25.6,12.0,'1568888.jpg',25);
+insert into mytf values(null,'机油',1,'个','湖北省武汉市',25.6,12.0,'1568888.jpg',25);
+
+select * from mytf
+
+
+#产品入库表
+
+insert into getcp VALUES(null,1,20,'2014-12-14',1);
+insert into getcp VALUES(null,1,20,'2014-12-18',1);
+insert into getcp VALUES(null,1,20,'2014-12-18',1);
+SELECT * from getcp
+
+#会员消费库表
+
+insert into outcp VALUES(null,2,1,20,'2014-12-25',1,1);
+insert into outcp VALUES(null,2,1,20,'2014-12-25',1,1);
+insert into outcp VALUES(null,2,1,20,'2014-12-25',1,1);
+
+
+select * from outcp  where rid=2
+select * from dj
+
+select sum(xcount) ,fid from outcp where fid=1
+
+select * from member
+SELECT DISTINCT tid ,a.rid, rname,rcard,a.fid,fname,b.cid ,cname ,foutprice,c.did,dzk,xcount,ttime,a.uid,uname from outcp a,mytf b,member c,getcp d,cptype f , dj e ,userinfo g where a.rid=c.rid and a.fid=b.fid and b.cid=f.cid and e.did=c.did and b.cid= f.cid and a.uid=g.uid and tid=8

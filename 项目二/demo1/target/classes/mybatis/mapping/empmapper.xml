@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.svse.dao.Empdao">
+	<select id="getall" resultType="Emp">
+		select eid ,a.pid,pname,eimg from emp a,dept b where a.pid=b.pid
+	</select>
+	
+	<select id="getOne" resultType="Emp">
+		select * from emp where eid=#{eid}
+	</select>
+	
+	<update id="updateEmp" parameterType="Emp">
+		update emp set ename=#{ename}, pid=#{pid} ,eimg=#{eimg} where eid=#{eid}
+	</update>
+	
+	<insert id="addEmp" parameterType="Emp">
+		insert into emp values(null,#{pid},#{ename},#{eimg})
+	</insert>
+	
+	<delete id="deleEmp" parameterType="int">
+		delete from emp where eid=#{eid}
+	</delete>
+</mapper>
