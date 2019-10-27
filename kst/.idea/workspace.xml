@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c2cdc0af-c895-439b-8140-fb8d8ec59249" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__bouncycastle_bcmail_jdk14_138.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__bouncycastle_bcprov_jdk14_138.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_beust_jcommander_1_72.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jai_imageio_jai_imageio_core_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_virtuald_curvesapi_1_06.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_zxing_core_3_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_zxing_javase_3_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_itextpdf_itext_asian_5_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_itextpdf_itextpdf_5_5_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_itextpdf_tool_xmlworker_5_5_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_lowagie_itext_2_1_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__de_odysseus_juel_juel_api_2_2_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__de_odysseus_juel_juel_impl_2_2_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__de_odysseus_juel_juel_spi_2_2_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_core_2_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_schema_2_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spi_2_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spring_web_2_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger2_2_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_common_2_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_ui_2_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_models_1_5_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_persistence_javax_persistence_api_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/kst-clm.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/java" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/java/com" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/java/com/kst" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/java/com/kst/clm" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/java/com/kst/clm/controller" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/java/com/kst/clm/controller/ClaimController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/java/com/kst/clm/controller/DetailController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/java/com/kst/clm/entity" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/java/com/kst/clm/entity/Claim.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/java/com/kst/clm/entity/Detail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/java/com/kst/clm/mapper" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/java/com/kst/clm/mapper/ClaimMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/java/com/kst/clm/mapper/DetailMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/java/com/kst/clm/service" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/java/com/kst/clm/service/ClaimService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/java/com/kst/clm/service/DetailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/java/com/kst/clm/service/impl" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/java/com/kst/clm/service/impl/ClaimServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/java/com/kst/clm/service/impl/DetailServiceImple.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/java/com/kst/clm/vo" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/java/com/kst/clm/vo/Grouputil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/Claim.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/Claim_en_US.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/Claim_zh_CN.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/mapping" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/mapping/ClaimMapper" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/css" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/jquery" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/jquery/jquery-3.4.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/js" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/js/Claim.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/css" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/css/layui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/css/layui.mobile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/css/modules" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/css/modules/code.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/css/modules/laydate" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/css/modules/laydate/default" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/css/modules/laydate/default/laydate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/css/modules/layer" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/css/modules/layer/default" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/css/modules/layer/default/icon-ext.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/css/modules/layer/default/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/css/modules/layer/default/layer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/css/modules/layer/default/loading-0.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/css/modules/layer/default/loading-1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/css/modules/layer/default/loading-2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/font" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/font/iconfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/font/iconfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/font/iconfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/font/iconfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/font/iconfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/0.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/10.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/11.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/12.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/13.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/14.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/15.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/16.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/17.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/18.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/19.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/20.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/21.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/22.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/23.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/24.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/25.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/26.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/27.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/28.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/29.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/3.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/30.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/31.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/32.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/33.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/34.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/35.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/36.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/37.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/38.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/39.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/4.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/40.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/41.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/42.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/43.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/44.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/45.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/46.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/47.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/48.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/49.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/5.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/50.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/51.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/52.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/53.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/54.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/55.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/56.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/57.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/58.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/59.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/6.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/60.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/61.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/62.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/63.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/64.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/65.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/66.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/67.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/68.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/69.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/7.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/70.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/71.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/8.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/images/face/9.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/lay" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/lay/modules" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/lay/modules/carousel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/lay/modules/code.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/lay/modules/colorpicker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/lay/modules/element.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/lay/modules/flow.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/lay/modules/form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/lay/modules/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/lay/modules/laydate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/lay/modules/layedit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/lay/modules/layer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/lay/modules/laypage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/lay/modules/laytpl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/lay/modules/mobile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/lay/modules/rate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/lay/modules/slider.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/lay/modules/table.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/lay/modules/transfer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/lay/modules/tree.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/lay/modules/upload.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/lay/modules/util.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/layui.all.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/static/layui/layui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/templates" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/templates/claim" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/templates/claim/list.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/templates/detail" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/main/resources/templates/detail/list.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/test" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/kst-clm/src/test/java" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/kst-pjs/kst-pjs.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-sys-api/kst-sys-api.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kst-sys/kst-sys.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_kst_kst_upms_dao_0_0_1_SNAPSHOT.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_kst_kst_upms_sys_0_0_1_SNAPSHOT.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_activiti_bpmn_converter_5_22_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_activiti_bpmn_model_5_22_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_activiti_common_rest_5_22_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_activiti_diagram_rest_5_22_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_activiti_engine_5_22_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_activiti_image_generator_5_22_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_activiti_json_converter_5_22_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_activiti_modeler_5_22_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_activiti_process_validation_5_22_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_activiti_spring_5_22_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_activiti_spring_boot_starter_basic_5_22_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_1_5_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_1_5_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_5_1_5_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_1_5_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_1_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-activiti/kst-activiti.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kst-activiti/kst-activiti.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-activiti/target/classes/com/kst/activiti/config/ActivitiConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-activiti/target/classes/com/kst/activiti/config/ActivitiConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-activiti/target/classes/com/kst/activiti/controller/ModelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-activiti/target/classes/com/kst/activiti/controller/ModelController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-activiti/target/classes/com/kst/activiti/controller/ProcessController.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-activiti/target/classes/com/kst/activiti/controller/ProcessController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-activiti/target/classes/com/kst/activiti/dto/ProcessDefDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-activiti/target/classes/com/kst/activiti/dto/ProcessDefDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-activiti/target/classes/com/kst/activiti/editor/controller/EditorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-activiti/target/classes/com/kst/activiti/editor/controller/EditorController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-activiti/target/classes/com/kst/activiti/ext/GroupEntityFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-activiti/target/classes/com/kst/activiti/ext/GroupEntityFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-activiti/target/classes/com/kst/activiti/ext/GroupEntityManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-activiti/target/classes/com/kst/activiti/ext/GroupEntityManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-activiti/target/classes/com/kst/activiti/form/ModelForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-activiti/target/classes/com/kst/activiti/form/ModelForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-activiti/target/classes/com/kst/activiti/service/ModelService.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-activiti/target/classes/com/kst/activiti/service/ModelService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-activiti/target/classes/com/kst/activiti/service/ProcessService.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-activiti/target/classes/com/kst/activiti/service/ProcessService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-activiti/target/classes/com/kst/activiti/service/TaskService.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-activiti/target/classes/com/kst/activiti/service/TaskService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-activiti/target/classes/com/kst/activiti/utils/ExtUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-activiti/target/classes/com/kst/activiti/utils/ExtUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-activiti/target/classes/static/diagram-viewer/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/kst-activiti/target/classes/static/diagram-viewer/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-activiti/target/classes/static/diagram-viewer/js/jquery/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/kst-activiti/target/classes/static/diagram-viewer/js/jquery/jquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-activiti/target/classes/static/editor-app/configuration/toolbar-default-actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/kst-activiti/target/classes/static/editor-app/configuration/toolbar-default-actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-activiti/target/classes/static/editor-app/css/style-common.css" beforeDir="false" afterPath="$PROJECT_DIR$/kst-activiti/target/classes/static/editor-app/css/style-common.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-activiti/target/classes/static/editor-app/editor.html" beforeDir="false" afterPath="$PROJECT_DIR$/kst-activiti/target/classes/static/editor-app/editor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-activiti/target/classes/static/editor-app/i18n/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/kst-activiti/target/classes/static/editor-app/i18n/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-activiti/target/classes/static/editor-app/libs/angular-mocks_1.2.13/angular-mocks.js" beforeDir="false" afterPath="$PROJECT_DIR$/kst-activiti/target/classes/static/editor-app/libs/angular-mocks_1.2.13/angular-mocks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-activiti/target/classes/static/editor-app/libs/es5-shim-15.3.4.5/es5-shim.js" beforeDir="false" afterPath="$PROJECT_DIR$/kst-activiti/target/classes/static/editor-app/libs/es5-shim-15.3.4.5/es5-shim.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-activiti/target/classes/static/editor-app/libs/es5-shim-15.3.4.5/tests/lib/jasmine.js" beforeDir="false" afterPath="$PROJECT_DIR$/kst-activiti/target/classes/static/editor-app/libs/es5-shim-15.3.4.5/tests/lib/jasmine.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-activiti/target/classes/static/editor-app/libs/jquery_1.11.0/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/kst-activiti/target/classes/static/editor-app/libs/jquery_1.11.0/jquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-activiti/target/classes/static/editor-app/libs/json3_3.2.6/lib/json3.js" beforeDir="false" afterPath="$PROJECT_DIR$/kst-activiti/target/classes/static/editor-app/libs/json3_3.2.6/lib/json3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-activiti/target/classes/static/editor-app/popups/icon-template.html" beforeDir="false" afterPath="$PROJECT_DIR$/kst-activiti/target/classes/static/editor-app/popups/icon-template.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-activiti/target/classes/static/editor-app/popups/save-model.html" beforeDir="false" afterPath="$PROJECT_DIR$/kst-activiti/target/classes/static/editor-app/popups/save-model.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-activiti/target/classes/static/model/process/processDefinition.js" beforeDir="false" afterPath="$PROJECT_DIR$/kst-activiti/target/classes/static/model/process/processDefinition.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-activiti/target/classes/stencilset.json" beforeDir="false" afterPath="$PROJECT_DIR$/kst-activiti/target/classes/stencilset.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-activiti/target/classes/templates/model/add.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/kst-activiti/target/classes/templates/model/add.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-activiti/target/classes/templates/model/list.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/kst-activiti/target/classes/templates/model/list.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-activiti/target/classes/templates/process/processDefinitionList.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/kst-activiti/target/classes/templates/process/processDefinitionList.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-ams/kst-ams.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kst-ams/kst-ams.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-att/kst-att.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kst-att/kst-att.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-common/kst-common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kst-common/kst-common.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-common/target/classes/com/kst/common/base/service/impl/BaseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-common/target/classes/com/kst/common/base/service/impl/BaseService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-common/target/classes/com/kst/common/constant/SearchParam.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-common/target/classes/com/kst/common/constant/SearchParam.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-isms/kst-isms.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kst-isms/kst-isms.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-isms/src/main/resources/mapping/QuestionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kst-isms/src/main/resources/mapping/QuestionMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-isms/target/classes/com/kst/isms/controller/DocumentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-isms/target/classes/com/kst/isms/controller/DocumentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-isms/target/classes/com/kst/isms/controller/QuestionConteroller.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-isms/target/classes/com/kst/isms/controller/QuestionConteroller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-isms/target/classes/com/kst/isms/entity/Question.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-isms/target/classes/com/kst/isms/entity/Question.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-isms/target/classes/com/kst/isms/entity/QuestionItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-isms/target/classes/com/kst/isms/entity/QuestionItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-isms/target/classes/com/kst/isms/mapper/QuestionMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-isms/target/classes/com/kst/isms/mapper/QuestionMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-isms/target/classes/com/kst/isms/service/IQuestionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-isms/target/classes/com/kst/isms/service/IQuestionService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-isms/target/classes/com/kst/isms/service/impl/QuestionItemServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-isms/target/classes/com/kst/isms/service/impl/QuestionItemServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-isms/target/classes/com/kst/isms/service/impl/QuestionServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-isms/target/classes/com/kst/isms/service/impl/QuestionServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-isms/target/classes/mapping/QuestionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kst-isms/target/classes/mapping/QuestionMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-isms/target/classes/templates/document/list.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/kst-isms/target/classes/templates/document/list.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-isms/target/classes/templates/question/addItem.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/kst-isms/target/classes/templates/question/addItem.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-isms/target/classes/templates/question/detail.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/kst-isms/target/classes/templates/question/detail.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-isms/target/classes/templates/question/list.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/kst-isms/target/classes/templates/question/list.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-log/kst-log.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kst-log/kst-log.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-log/target/classes/templates/sys/log/list.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/kst-log/target/classes/templates/sys/log/list.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-pjs/src/main/resources/templates/scheduleRegister/list.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/kst-pjs/src/main/resources/templates/scheduleRegister/list.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys-api/target/classes/com/kst/sys/api/entity/Dict.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys-api/target/classes/com/kst/sys/api/entity/Dict.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys-api/target/classes/com/kst/sys/api/vo/UserVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys-api/target/classes/com/kst/sys/api/vo/UserVO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/src/main/resources/templates/sys/question/list.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/src/main/resources/templates/sys/question/list.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/config/mvc/WebMvcConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/config/mvc/WebMvcConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/config/plus/SysMetaObjectHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/config/plus/SysMetaObjectHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/config/shiro/RedisCacheConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/config/shiro/RedisCacheConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/config/shiro/ShiroConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/config/shiro/ShiroConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/controller/DictController.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/controller/DictController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/controller/MenuComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/controller/MenuComparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/controller/MenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/controller/MenuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/controller/OrganizationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/controller/OrganizationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/controller/ResourceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/controller/ResourceController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/controller/RoleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/controller/RoleController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/filter/CaptchaFormAuthenticationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/filter/CaptchaFormAuthenticationFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/interceptor/MyHandlerInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/interceptor/MyHandlerInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/mapper/DictMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/mapper/DictMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/mapper/DirectoryMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/mapper/DirectoryMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/mapper/MenuMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/mapper/MenuMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/mapper/OrganizationMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/mapper/OrganizationMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/mapper/ResourceMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/mapper/ResourceMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/mapper/RoleMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/mapper/RoleMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/mapper/UserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/realm/AuthRealm.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/realm/AuthRealm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/service/impl/DictServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/service/impl/DictServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/service/impl/DirectoryServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/service/impl/DirectoryServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/service/impl/MenuServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/service/impl/MenuServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/service/impl/OrganizationServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/service/impl/OrganizationServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/service/impl/ResourceServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/service/impl/ResourceServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/service/impl/RoleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/service/impl/RoleServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/utils/PasswordUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/com/kst/sys/utils/PasswordUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/mapping/OrganizationMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/mapping/OrganizationMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/mapping/ResourceMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/mapping/ResourceMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/mapping/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/mapping/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/static/plugins/datatables/extensions/Responsive/examples/styling/foundation.html" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/static/plugins/datatables/extensions/Responsive/examples/styling/foundation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/templates/index.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/templates/index.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/templates/login.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/templates/login.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/templates/sys/dict/detail.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/templates/sys/dict/detail.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/templates/sys/dict/list.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/templates/sys/dict/list.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/templates/sys/dict/typeInfo.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/templates/sys/dict/typeInfo.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/templates/sys/menu/detail.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/templates/sys/menu/detail.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/templates/sys/menu/list.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/templates/sys/menu/list.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/templates/sys/organization/allotUser.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/templates/sys/organization/allotUser.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/templates/sys/organization/detail.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/templates/sys/organization/detail.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/templates/sys/organization/list.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/templates/sys/organization/list.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/templates/sys/resource/detail.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/templates/sys/resource/detail.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/templates/sys/resource/fileType.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/templates/sys/resource/fileType.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/templates/sys/resource/fileUpload.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/templates/sys/resource/fileUpload.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/templates/sys/resource/list.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/templates/sys/resource/list.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/templates/sys/role/detail.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/templates/sys/role/detail.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/templates/sys/role/list.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/templates/sys/role/list.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/templates/sys/user/changePassword.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/templates/sys/user/changePassword.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/templates/sys/user/detail.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/templates/sys/user/detail.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/templates/sys/user/list.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/templates/sys/user/list.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-sys/target/classes/templates/sys/user/userInfo.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/kst-sys/target/classes/templates/sys/user/userInfo.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-web/kst-web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kst-web/kst-web.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kst-web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-web/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/kst-web/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-web/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/kst-web/target/classes/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-web/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/kst-web/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst-web/target/classes/com/kst/KstWebApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/kst-web/target/classes/com/kst/KstWebApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kst.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kst.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/kst$KstWebApplication.ic" NAME="KstWebApplication Coverage Results" MODIFIED="1571997547006" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="kst" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package-info" />
+        <option value="Interface" />
+        <option value="spring-beans.schema" />
+        <option value="FxmlFile" />
+        <option value="HTML File" />
+        <option value="Class" />
+        <option value="JavaScript File" />
+        <option value="Tag Library Descriptor" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>EntityWrapper</find>
+      <find>selected</find>
+      <find>clickToSelect</find>
+      <find>bootstrapTable</find>
+      <find>changeColor</find>
+      <find>toastr</find>
+      <find>re_load</find>
+      <find>applyTable</find>
+      <find>info</find>
+      <find>apply1</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>QueryWrapper</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Slld3KgfoTWTuHnyha6IO0MNl4" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+    <ConfirmationsSetting value="2" id="Remove" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1571998314920" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\project\isms\20_本開発\30_Source\kst\kst-clm\src\main\resources" />
+      <recent name="D:\project\isms\20_本開発\30_Source\kst\kst-clm\src\main\resources\templates\detail" />
+      <recent name="D:\project\isms\20_本開発\30_Source\kst\kst-clm\src\main\resources\templates\Apply" />
+      <recent name="D:\project\isms\20_本開発\30_Source\kst\kst-clm\src\main\resources\templates\Claim" />
+      <recent name="D:\project\isms\20_本開発\30_Source\kst\kst-clm\src\main\resources\templates" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.kst.clm.vo" />
+      <recent name="com.kst.clm.service" />
+      <recent name="com.kst.clm.mapper" />
+      <recent name="com.kst.sys.mapper" />
+      <recent name="com.kst.sys.api.service" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\project\isms\20_本開発\30_Source\kst\kst-clm\src\main\resources\templates\Claim" />
+      <recent name="D:\project\isms\20_本開発\30_Source\kst\kst-clm\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.NumbertoCN">
+    <configuration name="ClaimController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.kst.clm.controller.ClaimController" />
+      <module name="kst-clm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kst.clm.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NumbertoCN" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.kst.clm.vo.NumbertoCN" />
+      <module name="kst-clm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kst.clm.vo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KstWebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="kst-web" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kst.KstWebApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.NumbertoCN" />
+        <item itemvalue="Application.ClaimController" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>C:\Users\hp\AppData\Roaming\Subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c2cdc0af-c895-439b-8140-fb8d8ec59249" name="Default Changelist" comment="" />
+      <created>1559538164810</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1559538164810</updated>
+      <workItem from="1559538167790" duration="5050000" />
+      <workItem from="1562200478267" duration="403000" />
+      <workItem from="1562200948668" duration="155000" />
+      <workItem from="1562201556441" duration="8688000" />
+      <workItem from="1571797222654" duration="3000" />
+      <workItem from="1571797265670" duration="648000" />
+      <workItem from="1571797973986" duration="20495000" />
+      <workItem from="1571876989046" duration="6514000" />
+      <workItem from="1571883681898" duration="23938000" />
+      <workItem from="1571964136326" duration="19553000" />
+      <workItem from="1571987000888" duration="1165000" />
+      <workItem from="1571988197008" duration="3217000" />
+      <workItem from="1571991460686" duration="6850000" />
+      <workItem from="1572146150155" duration="8978000" />
+    </task>
+    <task id="LOCAL-00001">
+      <created>1562203301890</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1562203301890</updated>
+    </task>
+    <task id="LOCAL-00002">
+      <created>1562208778559</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1562208778559</updated>
+    </task>
+    <task id="LOCAL-00003">
+      <created>1562208896747</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1562208896747</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/kst-isms/src/main/java/com/kst/isms/controller/QuestionConteroller.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+</project>

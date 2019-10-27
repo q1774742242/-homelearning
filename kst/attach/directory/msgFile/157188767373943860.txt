@@ -1,0 +1,9 @@
+status申请状态
+userid申请人
+applydate申请日期
+departid部门id
+date创建时间
+by执行人
+update更新时间
+up by更新人
+remark 备注

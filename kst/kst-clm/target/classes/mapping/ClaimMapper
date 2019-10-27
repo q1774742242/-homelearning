@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.kst.clm.mapper.ClaimMapper">
+    <!--定义一个resultmapper-->
+
+    <!--全查询-->
+    <select id="selectClaimAll" parameterType="com.kst.common.base.vo.DataTable" resultType="Claim">
+        select c.*,d.nick_name,g.name,l.group_id
+        from kst.clm_claim c, kst.sys_user d,kst.sys_user_grouplist l,kst.sys_user_group g
+        <where>
+            c.clm_userid=d.id and
+            l.user_id=d.id and
+            g.id=l.group_id and
+            c.del_flag=1
+            <!--申请人搜索-->
+            <if test='searchParams.nick_name!="" and searchParams.name!=null'>
+                and d.nick_name like CONCAT( '%','${searchParams.nick_name}', '%')
+            </if>
+            <!--申请状态-->
+            <if test="clm_status!=null">
+                and  clm_status=#{clm_status}
+            </if>
+            <!--部门-->
+            <if test="group_id!=0 and group_id!=null">
+                and  l.group_id=#{group_id}
+            </if>
+            <!-- 申请时间-->
+            <if test="clm_applydate!=0 and clm_applydate!=null">
+                and    c.clm_applydate=#{clm_applydate}
+            </if>
+        </where>
+        limit #{searchParams.startNo} , #{pageSize}
+    </select>
+
+    <!--删除单条数据-->
+    <update id="uppClaim" parameterType="int">
+       update  kst.clm_claim set del_flag=#{del_flag} where cid=#{cid}
+   </update>
+
+    <!--修改-->
+    <update id="updateClaim" parameterType="Claim" >
+         update kst.clm_claim set clm_status=#{clm_status},clm_userid=#{clm_userid},clm_applydate=#{clm_applydate},clm_departid=#{clm_departid},update_date=#{update_date} where cid=#{cid};
+    </update>
+    <!--增加-->
+    <insert id="addClaim" parameterType="Claim">
+        insert into kst.clm_claim(cid,clm_status,clm_userid,clm_applydate,clm_departid,create_date)
+        values(null,#{clm_status},#{clm_userid},#{clm_applydate},#{clm_departid},#{create_date)
+
+    </insert>
+    <!--查询单个数据-->
+    <select id="selectClaim" resultType="Claim" parameterType="int"  >
+        select * from kst.clm_claim  cid=#{cid}
+    </select>
+    <!--查询数据count-->
+    <select id="selectTotal" resultType="int" parameterType="com.kst.common.base.vo.DataTable"  >
+        select count(*) from kst.clm_claim c, kst.sys_user d,kst.sys_user_grouplist l,
+        <where>
+            c.clm_userid=d.id and
+            l.user_id=d.id and
+            del_flag=1
+            <!--申请人搜索-->
+            <if test='searchParams.nick_name!="" and searchParams.name!=null'>
+                and d.nick_name like CONCAT( '%','${searchParams.nick_name}', '%')
+            </if>
+            <!--申请状态-->
+            <if test="searchParams.clm_status!=null">
+                and  c.clm_status=#{clm_status}
+            </if>
+            <!--部门-->
+            <if test="group_id!=0 and group_id!=null">
+                and  l.group_id=#{group_id}
+            </if>
+            <!-- 申请时间-->
+            <if test="clm_applydate!=0 and clm_applydate!=null">
+                and c.clm_applydate=#{clm_applydate}
+            </if>
+        </where>
+    </select>
+
+    <!--查询部门群组相对应的人员-->
+    <select id="selectGroupuser" resultType="User" parameterType="Claim"  >
+       select nick_name from kst.sys_user a,kst.sys_user_grouplist b where a.id=b.user_id and  b.group_id=#{group_id}
+    </select>
+
+    <!--根据申请人查询所在部门群组-->
+    <select id="selectGroup" resultType="Goruputil" parameterType="int">
+        select b.name from kst.sys_user_grouplist a ,kst.sys_user_group b where b.id=a.group_id and a.user_id=#{user_id}
+    </select>
+</mapper>
